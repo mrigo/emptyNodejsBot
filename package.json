@@ -1,0 +1,35 @@
+{
+  "name": "empty_node_js_bot",
+  "version": "1.0.0",
+  "description": "An empty bot for Messenger and Telegram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mrigo@github.com/mrigo/emptyNodejsBot.git"
+  },
+  "keywords": [
+    "bot",
+    "telegram",
+    "messenger"
+  ],
+  "author": "Mattia Rigo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrigo/emptyNodejsBot/issues"
+  },
+  "homepage": "https://github.com/mrigo/emptyNodejsBot#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.20.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.1",
+    "natural": "^0.4.0",
+    "request": "^2.72.0",
+    "underscore": "^1.8.3",
+    "universal-analytics": "^0.3.11"
+  }
+}
