@@ -23,7 +23,7 @@ var helpers = require('./helpers/helpers'),
  */
 
 /**
- * process.env.TELEGRAM_BOT_TOKEN = Your Telegram bot token
+ * process.env.TELEGRAM_BOT_TOKEN = Your Telegram bot token (without the word "bot" at the beginning)
  */
 
 var app = express(),
