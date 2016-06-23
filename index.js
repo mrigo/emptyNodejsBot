@@ -68,7 +68,7 @@ app.post('/fb', function (req, res) {
             var sender = event.sender.id;
             if (event.message && event.message.text) {
                 var text = event.message.text;
-                //messenger.sendTextMessage(sender, "Text received, echo: " + text)
+                //messenger.sendTextMessage(sender, "Text received, echo: " + text, function(res, err){});
             }
         }
     }
@@ -94,9 +94,9 @@ app.post("/telegram", function(req, res) {
     switch (helpers.messageType(req)) {
         case 'text':
             if (helpers.isCommand(user_text)) {
-                //tg_commands.sendSimpleMessage(chat_id, telegram_token, "Welcome "+user.info.telegram_username+"!");
+                //tg_commands.sendSimpleMessage(chat_id, telegram_token, "Welcome "+user.info.telegram_username+"!", function(err) {});
             } else {
-                //tg_commands.sendSimpleMessage(chat_id, telegram_token, "Welcome "+user.info.telegram_username+"!");
+                //tg_commands.sendSimpleMessage(chat_id, telegram_token, "Welcome "+user.info.telegram_username+"!", function(err) {});
             }
             break;
         case 'location':

@@ -67,7 +67,7 @@ var messenger = require('./messenger/messenger');
 
 To send a tex message you can use
 ```
-messenger.sendTextMessage(recipientId, messageText);
+messenger.sendTextMessage(recipientId, messageText, callback(response, err));
 ```
 
 ### Telegram Methods
@@ -78,7 +78,7 @@ var telegram = require('./telegram/commands');
 
 To send a tex message you can use
 ```
-telegram.sendSimpleMessage(chat_id, token, messageText);
+telegram.sendSimpleMessage(chat_id, token, messageText, callback(response, err));
 ```
 
 

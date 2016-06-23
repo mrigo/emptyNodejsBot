@@ -27,7 +27,7 @@ module.exports = {
         }
     },
 
-    sendTextMessage: function (recipientId, messageText) {
+    sendTextMessage: function (recipientId, messageText, callback) {
         // For the recipient you can choose an id or even a phone number with the 'phone_number' key
         var messageData = {
             recipient: {
@@ -38,10 +38,10 @@ module.exports = {
             }
         };
 
-        this.callSendAPI(messageData);
+        this.callSendAPI(messageData, callback);
     },
 
-    callSendAPI: function(messageData) {
+    callSendAPI: function(messageData, callback) {
         request({
             uri: 'https://graph.facebook.com/v2.6/me/messages',
             qs: { access_token: process.env.FB_PAGE_ACCESS_TOKEN },
@@ -52,12 +52,14 @@ module.exports = {
                 var recipientId = body.recipient_id;
                 var messageId = body.message_id;
 
-                console.log("Successfully sent generic message with id %s to recipient %s",
-                messageId, recipientId);
+                console.log("Successfully sent generic message with id %s to recipient %s", messageId, recipientId);
             } else {
                 console.error("Unable to send message.");
                 console.error(response);
                 console.error(error);
+            }
+            if (callback) {
+                callback(response, error);
             }
         });
     },
